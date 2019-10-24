@@ -48,7 +48,7 @@ async function main() {
 
     for (const [key, value] of Object.entries(data)) {
       core.info(`> ${key}: ${value}`);
-      core.setOutput(key, JSON.stringify(value, null, 2));
+      core.setOutput(key, value);
     }
   } catch (error) {
     core.debug(inspect(error));
